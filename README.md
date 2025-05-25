@@ -17,7 +17,8 @@ An AI-powered chatbot system built using Large Language Models (LLMs) for docume
 🛠 Quick Start
 -------------------------------
 1. Clone the repo:
-   git clone https://github.com/kulveenkaur25/LLm.git
+   git clone https://github.com/kulveenkaur25/LLm-Q-A-chatbot.git
+
    cd LLm
 
 2. Install dependencies:
