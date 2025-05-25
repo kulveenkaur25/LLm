@@ -1,73 +1,50 @@
 Kulveen's LLM QA Chatbot Builder
 ================================
 
-An interactive and modular chatbot system that leverages Large Language Models (LLMs) for document-based question answering. This project supports data preparation, model fine-tuning, evaluation, and real-time inference — all wrapped in an intuitive Gradio interface.
+An AI-powered chatbot system built using Large Language Models (LLMs) for document-based question answering. This project enables seamless data collection, model fine-tuning, human evaluation, and real-time inference — all through an elegant Gradio UI.
 
-==================================================
-🌟 Features
---------------------------------------------------
-- 📄 Data Collection via Web UI (fine-tuning & test sets)
-- 🛠 Fine-tune LLMs like Mistral, Zephyr, LLaMA, Phi, Flan-T5, or custom models
-- 👨‍⚖️ Human Evaluation dashboard for rating model-generated answers
-- 💬 Inference tab with RAG (Retrieval Augmented Generation) for live Q&A
-- 🧠 Embedding Fine-tuning using various loss functions
-- 🚀 Deployment-ready interface and model export options
+-------------------------------
+🚀 Features
+-------------------------------
+- Data preparation via web UI (fine-tuning & testing)
+- Fine-tune LLMs: Mistral, Zephyr, LLaMA, Phi, Flan-T5, or custom
+- Human evaluation interface for rating model answers
+- Real-time inference using RAG (Retrieval Augmented Generation)
+- Embedding model training with 5+ loss functions
+- Deployment-ready architecture
 
-==================================================
-🗂 Project Structure
---------------------------------------------------
-src/
-├── inference.py            → RAG pipeline and inference logic
-├── full_UI.py              → Gradio Blocks interface
-├── fine_tune_file/         → Scripts for training specific models
-├── deploy/                 → Export-ready deploy scripts
-├── utils.py                → Support utilities
+-------------------------------
+🛠 Quick Start
+-------------------------------
+1. Clone the repo:
+   git clone https://github.com/kulveenkaur25/LLm.git
+   cd LLm
 
-software screenshot/        → App screenshots
+2. Install dependencies:
+   pip install -r requirements.txt
 
-requirements.txt            → Python dependencies
-README.md                   → This file
+3. Run the app:
+   python src/full_UI.py
 
-==================================================
-🛠 Installation
+-------------------------------
+📂 Dataset Format
+-------------------------------
 
-Clone and install:
-------------------
-git clone https://github.com/kulveenkaur25/LLm.git
-cd LLm
-pip install -r requirements.txt
+Fine-tuning data (finetune_data.xlsx):
+--------------------------------------
+| question    | answer     |
+|-------------|------------|
+| What is AI? | AI is...   |
 
-Start the app:
---------------
-python src/full_UI.py
+Testing data (testing_data.xlsx):
+---------------------------------
+| question    | ground_truth | context     |
+|-------------|---------------|-------------|
+| What is AI? | AI is...      | AI means... |
 
-==================================================
-📁 Dataset Format
-
-For fine-tuning (`finetune_data.xlsx`):
----------------------------------------
-| question           | answer          |
-|--------------------|-----------------|
-| What is AI?        | AI stands for...|
-
-For testing (`testing_data.xlsx`):
-----------------------------------
-| question           | ground_truth    | context     |
-|--------------------|-----------------|-------------|
-| What is AI?        | AI stands for...| AI is...    |
-
-==================================================
-🔢 Supported Loss Functions for Embedding Fine-Tuning
---------------------------------------------------
-- MultipleNegativesRankingLoss
-- OnlineContrastiveLoss
-- TripletLoss
-- GISTEmbedLoss
-- CoSENTLoss
-
-==================================================
-🧠 LLMs You Can Fine-Tune
---------------------------------------------------
+-------------------------------
+🧠 Models You Can Fine-Tune
+-------------------------------
 - Mistral
 - Zephyr
 - LLaMA
@@ -75,28 +52,27 @@ For testing (`testing_data.xlsx`):
 - Flan-T5
 - Custom (via editable Python code)
 
-==================================================
-👤 Author
-
-Kulveen Kaur  
-MS in Applied Data Science – Syracuse University  
-LinkedIn: https://www.linkedin.com/in/kulveenkaur25  
-Portfolio :https://kulveenkaur25.github.io/Portfolio
-GitHub: https://github.com/kulveenkaur25  
-Research :https://scholar.google.com/citations?hl=en&user=-7a73VsAAAAJ&view_op=list_works
-
-==================================================
+-------------------------------
 📸 Screenshots
-
-Screenshots available in the `software screenshot/` folder:
+-------------------------------
+See the "software screenshot" folder for visual previews:
 - Data Collection
 - Fine-tuning
 - Human Evaluation
 - Inference
 
-==================================================
+-------------------------------
+👩‍💻 About the Author
+-------------------------------
+Kulveen Kaur  
+M.S. in Applied Data Science – Syracuse University  
+
+LinkedIn: https://www.linkedin.com/in/kulveenkaur25  
+Portfolio: https://kulveenkaur25.github.io/Portfolio  
+GitHub: https://github.com/kulveenkaur25  
+Research: https://scholar.google.com/citations?hl=en&user=-7a73VsAAAAJ&view_op=list_works
+
+-------------------------------
 📄 License
-
+-------------------------------
 This project is licensed under the MIT License.
-
-==================================================
