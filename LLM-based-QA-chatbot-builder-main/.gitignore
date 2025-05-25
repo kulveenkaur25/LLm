@@ -1,0 +1,5 @@
+testing/
+src/models/
+src/vectorstore/
+**/__pycache__
+*.bak
